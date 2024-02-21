@@ -1,0 +1,54 @@
+/* Body styles */
+body {
+  background-color: #f4f4f4; /* Light gray background */
+  font-family: Arial, sans-serif; /* Use a common font for better readability */
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly rounded borders */
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+/* Input focus styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #5CA904; /* Change border color on focus */
+}
+
+/* Button styles */
+button[type="submit"] {
+  background-color: #5CA904;
+  color: white;
+  padding: 14px 24px; /* Increase padding for better button size */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+/* Button hover styles */
+button[type="submit"]:hover {
+  background-color: #4b8500; /* Darker green on hover */
+}
+
+/* Form container styles */
+.form-container {
+  max-width: 600px; /* Limit form width for better readability */
+  margin: auto; /* Center align form */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
