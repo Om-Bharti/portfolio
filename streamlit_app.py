@@ -21,7 +21,7 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css("style/style.css")
+local_css("style.css")
 
 # ---- LOAD ASSETS ----
 
@@ -32,7 +32,7 @@ lottie_p1 = load_lottieurl("https://lottie.host/d4379d65-5f67-4210-9965-b6ec74e1
 lottie_p2 = load_lottieurl("https://lottie.host/fbde61d6-bce7-4bbd-a552-7f82f3bb4e59/WrB0knelzK.json")
 lottie_p3 = load_lottieurl("https://lottie.host/218487af-45f2-4b80-a325-2c1ac28b8e8d/Zk1BmPVMZi.json")
 lottie_coding = load_lottieurl("https://lottie.host/4ccc97a1-4af5-48ed-90c7-bd9d30febdda/HLu8RIPbmK.json")
-your_image=Image.open("images/om.png")
+your_image=Image.open("om.png")
 
 # ---- HEADER SECTION ----
 with st.container():
