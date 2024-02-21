@@ -5,14 +5,7 @@ from PIL import Image
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 # Set the primary color to green
-st.set_page_config(
-    page_title="Your App Title",
-    page_icon=":four_leaf_clover:",
-    layout="wide",
-    initial_sidebar_state="expanded",  # Adjust as needed
-    background="white",  # Set background color to white
-    primaryColor="#000000",  # Set primary color to black
-)
+st.set_page_config(page_title="OM", page_icon=":four_leaf_clover:", layout="wide")
 
 
 def load_lottieurl(url):
