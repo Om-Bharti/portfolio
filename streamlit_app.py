@@ -176,14 +176,14 @@ with st.container():
 
     # Add small buttons for social media accounts in each column
     with col1:
-        st.button("Instagram", "https://www.instagram.com/om.bharti_?igsh=MTd0NXJpN3YyZGszOA==")
+        st.button("Instagram", help="https://www.instagram.com/om.bharti_?igsh=MTd0NXJpN3YyZGszOA==")
 
     with col2:
-        st.button("GitHub", "https://github.com/Om-Bharti")
+        st.button("GitHub", help="https://github.com/Om-Bharti")
 
     with col3:
-        st.button("LinkedIn", "www.linkedin.com/in/om-bharti-0b7777282")
+        st.button("LinkedIn", help="www.linkedin.com/in/om-bharti-0b7777282")
 
     with col4:
-        st.button("Twitter", "https://twitter.com/Om__Bharti")
+        st.button("Twitter", help="https://twitter.com/Om__Bharti")
 
