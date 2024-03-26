@@ -174,15 +174,26 @@ with st.container():
     # Define columns for social media links
     col1, col2, col3, col4 = st.columns(4)
 
-    # Add small buttons for social media accounts in each column
-    with col1:
-        st.button("Instagram", help="https://www.instagram.com/om.bharti_?igsh=MTd0NXJpN3YyZGszOA==")
+    # Define social media icons
+    social_icons = {
+        "Instagram": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png",
+        "GitHub": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "LinkedIn": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png",
+        "Twitter": "https://cdn.icon-icons.com/icons2/2429/PNG/512/twitter_logo_icon_147217.png"
+    }
 
-    with col2:
-        st.button("GitHub", help="https://github.com/Om-Bharti")
+    # Define social media links
+    social_links = {
+        "Instagram": "https://www.instagram.com/om.bharti_?igshid=MTd0NXJpN3YyZGszOA==",
+        "GitHub": "https://github.com/Om-Bharti",
+        "LinkedIn": "https://www.linkedin.com/in/om-bharti-0b7777282",  # Updated LinkedIn URL if necessary
+        "Twitter": "https://twitter.com/Om__Bharti"
+    }
 
-    with col3:
-        st.button("LinkedIn", help="www.linkedin.com/in/om-bharti-0b7777282")
-
-    with col4:
-        st.button("Twitter", help="https://twitter.com/Om__Bharti")
+    # Display social media links with icons
+    for platform, icon_url in social_icons.items():
+        with globals()[f'col{len(platform) % 4 + 1}']:
+            st.markdown(
+                f'<a href="{social_links[platform]}" target="_blank"><img src="{icon_url}" alt="{platform}" width="50"></a>',
+                unsafe_allow_html=True
+            )
