@@ -16,12 +16,12 @@ def load_lottieurl(url):
 
 
 # Use local CSS
-def local_css(style):
-    with open(style) as f:
+def local_css(file_name):
+    with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css("style/style.css")
+local_css("style.css")
 
 # ---- LOAD ASSETS ----
 
@@ -32,7 +32,7 @@ lottie_p1 = load_lottieurl("https://lottie.host/d4379d65-5f67-4210-9965-b6ec74e1
 lottie_p2 = load_lottieurl("https://lottie.host/fbde61d6-bce7-4bbd-a552-7f82f3bb4e59/WrB0knelzK.json")
 lottie_p3 = load_lottieurl("https://lottie.host/218487af-45f2-4b80-a325-2c1ac28b8e8d/Zk1BmPVMZi.json")
 lottie_coding = load_lottieurl("https://lottie.host/4ccc97a1-4af5-48ed-90c7-bd9d30febdda/HLu8RIPbmK.json")
-your_image=Image.open("images/om.png")
+your_image=Image.open("om.png")
 
 # ---- HEADER SECTION ----
 with st.container():
@@ -174,26 +174,15 @@ with st.container():
     # Define columns for social media links
     col1, col2, col3, col4 = st.columns(4)
 
-    # Define social media icons
-    social_icons = {
-        "Instagram": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png",
-        "GitHub": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-        "LinkedIn": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png",
-        "Twitter": "https://cdn.icon-icons.com/icons2/2429/PNG/512/twitter_logo_icon_147217.png"
-    }
+    # Add small buttons for social media accounts in each column
+    with col1:
+        st.button("Instagram", help="https://www.instagram.com/om.bharti_?igsh=MTd0NXJpN3YyZGszOA==")
 
-    # Define social media links
-    social_links = {
-        "Instagram": "https://www.instagram.com/om.bharti_?igshid=MTd0NXJpN3YyZGszOA==",
-        "GitHub": "https://github.com/Om-Bharti",
-        "LinkedIn": "https://www.linkedin.com/in/om-bharti-0b7777282",  # Updated LinkedIn URL if necessary
-        "Twitter": "https://twitter.com/Om__Bharti"
-    }
+    with col2:
+        st.button("GitHub", help="https://github.com/Om-Bharti")
 
-    # Display social media links with icons
-    for platform, icon_url in social_icons.items():
-        with globals()[f'col{len(platform) % 4 + 1}']:
-            st.markdown(
-                f'<a href="{social_links[platform]}" target="_blank"><img src="{icon_url}" alt="{platform}" width="50"></a>',
-                unsafe_allow_html=True
-            )
+    with col3:
+        st.button("LinkedIn", help="www.linkedin.com/in/om-bharti-0b7777282")
+
+    with col4:
+        st.button("Twitter", help="https://twitter.com/Om__Bharti")
