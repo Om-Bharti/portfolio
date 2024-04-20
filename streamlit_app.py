@@ -184,7 +184,7 @@ with st.container():
 
     # Define social media links
     social_links = {
-        "Instagram": "https://www.instagram.com/om.bharti_?igshid=MTd0NXJpN3YyZGszOA==",
+        "Instagram": "https://www.instagram.com/0m.bharti?igshid=MTd0NXJpN3YyZGszOA==",
         "GitHub": "https://github.com/Om-Bharti",
         "LinkedIn": "https://www.linkedin.com/in/om-bharti-0b7777282",  # Updated LinkedIn URL if necessary
         "Twitter": "https://twitter.com/Om__Bharti"
